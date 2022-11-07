@@ -12,9 +12,7 @@ from config import K1B1, K1B2, K1B3, K1B4, \
 K1_main_menu_reply = ReplyKeyboardMarkup(
     keyboard=[
         [
-            KeyboardButton(text=K1B1)
-        ],
-        [
+            KeyboardButton(text=K1B1),
             KeyboardButton(text=K1B2)
         ],
         [
@@ -31,9 +29,7 @@ K1_main_menu_reply = ReplyKeyboardMarkup(
 K2_reply = ReplyKeyboardMarkup(
     keyboard=[
         [
-            KeyboardButton(text=K2B1)
-        ],
-        [
+            KeyboardButton(text=K2B1),
             KeyboardButton(text=K2B2)
         ],
         [
@@ -50,9 +46,7 @@ K2_reply = ReplyKeyboardMarkup(
 K3_reply = ReplyKeyboardMarkup(
     keyboard=[
         [
-            KeyboardButton(text=K3B1)
-        ],
-        [
+            KeyboardButton(text=K3B1),
             KeyboardButton(text=K3B2)
         ],
         [
@@ -69,9 +63,7 @@ K3_reply = ReplyKeyboardMarkup(
 K4_reply = ReplyKeyboardMarkup(
     keyboard=[
         [
-            KeyboardButton(text=K4B1)
-        ],
-        [
+            KeyboardButton(text=K4B1),
             KeyboardButton(text=K4B2)
         ],
         [
@@ -90,7 +82,7 @@ K4_reply = ReplyKeyboardMarkup(
 call_me = InlineKeyboardMarkup(
     inline_keyboard=[
         [
-            InlineKeyboardButton('Да', url='google.com')
+            InlineKeyboardButton('Да', callback_data='Да')
         ],
         [
             InlineKeyboardButton('Оставить номер телефона', url='google.com')
