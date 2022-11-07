@@ -1,9 +1,10 @@
 from aiogram.types import Message, ReplyKeyboardRemove, CallbackQuery
 from aiogram.dispatcher.filters import Text, Command
 
-from keyboards import language
+from keyboards import language, main_menu
 
 from main import bot, dp
+
 from config import chat_id
 
 
@@ -19,10 +20,10 @@ async def bot_start(message: Message):
 # Main_menu RU
 @dp.message_handler(Text(equals=['Русский']))
 async def bot_start(message: Message):
-    await message.answer(START_MESSAGE_RU, reply_markup=main_menu_ru)
+    await message.answer(START_MESSAGE_RU, reply_markup=main_menu)
 
 # Main_menu EN
 @dp.message_handler(Text(equals=['English']))
 async def bot_start(message: Message):
-    await message.answer(START_MESSAGE_EN, reply_markup=main_menu_en)
+    await message.answer(START_MESSAGE_EN, reply_markup=main_menu)
 

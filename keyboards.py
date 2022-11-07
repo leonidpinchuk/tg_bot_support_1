@@ -17,3 +17,12 @@ language = ReplyKeyboardMarkup(
     ],
     resize_keyboard=True
 )
+
+
+main_menu = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton('Написать', url=CALL_LINK_RU)
+        ]
+    ]
+)
