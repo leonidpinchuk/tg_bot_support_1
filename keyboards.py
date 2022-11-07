@@ -38,6 +38,9 @@ K2_reply = ReplyKeyboardMarkup(
         ],
         [
             KeyboardButton(text=K2K3K4_Back)
+        ],
+        [
+            KeyboardButton(text='---')
         ]
     ],
     resize_keyboard=True
@@ -54,6 +57,9 @@ K3_reply = ReplyKeyboardMarkup(
         ],
         [
             KeyboardButton(text=K2K3K4_Back)
+        ],
+        [
+            KeyboardButton(text='---')
         ]
     ],
     resize_keyboard=True
@@ -70,6 +76,9 @@ K4_reply = ReplyKeyboardMarkup(
         ],
         [
             KeyboardButton(text=K2K3K4_Back)
+        ],
+        [
+            KeyboardButton(text='---')
         ]
     ],
     resize_keyboard=True
@@ -78,10 +87,13 @@ K4_reply = ReplyKeyboardMarkup(
 
 
 
-main_menu = InlineKeyboardMarkup(
+call_me = InlineKeyboardMarkup(
     inline_keyboard=[
         [
-            InlineKeyboardButton('Написать')#, url=)
+            InlineKeyboardButton('Да', url='google.com')
+        ],
+        [
+            InlineKeyboardButton('Оставить номер телефона', url='google.com')
         ]
     ]
 )
