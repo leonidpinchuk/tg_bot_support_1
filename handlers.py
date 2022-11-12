@@ -2,7 +2,7 @@ from aiogram.types import Message, ReplyKeyboardRemove, CallbackQuery
 from aiogram.dispatcher.filters import Text, Command
 
 from keyboards import K1_main_menu_reply, K2_reply, K3_reply, K4_reply, \
-    call_me
+    call_me, drop_offer
 
 from main import bot, dp
 
@@ -12,7 +12,7 @@ from config import chat_id, start_message, \
     K3B1, K3B2, \
     K2_message, K3_message, K4_message, K5_message, \
     K2K3K4_Back, \
-    call_me_message
+    call_me_message, offer_message
 
 
 async def send_hello(dp):
@@ -46,7 +46,9 @@ async def bot_start(message: Message):
     await message.answer(start_message, reply_markup=K1_main_menu_reply)
 
 # K2
-
+@dp.message_handler(Text(equals=[K2B2]))
+async def bot_start(message: Message):
+    await message.answer(offer_message, reply_markup=drop_offer)
 
 # K3
 @dp.message_handler(Text(equals=[K3B1]))

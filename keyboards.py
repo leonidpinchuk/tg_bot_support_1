@@ -89,3 +89,11 @@ call_me = InlineKeyboardMarkup(
         ]
     ]
 )
+
+drop_offer = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton('Назад', url='google.com')
+        ]
+    ]
+)
